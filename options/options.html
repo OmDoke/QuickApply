@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuickApply Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-area">
+      <img src="../icons/icon48.png" alt="logo" class="logo">
+      <h2>QuickApply</h2>
+    </div>
+    <ul class="nav">
+      <li class="active" data-tab="profile-tab">My Profile</li>
+      <li data-tab="tracker-tab">Application Tracker</li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div id="profile-tab" class="tab-content active">
+      <h1>My Profile</h1>
+      <p class="subtitle">Fill out your details to auto-fill job applications.</p>
+      
+      <form id="profileForm">
+        <div class="form-section">
+          <h3>Personal Details</h3>
+          <div class="grid">
+            <div class="input-group">
+              <label>First Name</label>
+              <input type="text" id="firstName" name="firstName">
+            </div>
+            <div class="input-group">
+              <label>Last Name</label>
+              <input type="text" id="lastName" name="lastName">
+            </div>
+            <div class="input-group">
+              <label>Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="input-group">
+              <label>Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Address</h3>
+          <div class="grid">
+            <div class="input-group full-width">
+              <label>Street Address</label>
+              <input type="text" id="address" name="address">
+            </div>
+            <div class="input-group">
+              <label>City</label>
+              <input type="text" id="city" name="city">
+            </div>
+            <div class="input-group">
+              <label>State / Province</label>
+              <input type="text" id="state" name="state">
+            </div>
+            <div class="input-group">
+              <label>ZIP / Postal Code</label>
+              <input type="text" id="zip" name="zip">
+            </div>
+            <div class="input-group">
+              <label>Country</label>
+              <input type="text" id="country" name="country">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Links & Experience</h3>
+          <div class="grid">
+            <div class="input-group">
+              <label>LinkedIn URL</label>
+              <input type="url" id="linkedin" name="linkedin">
+            </div>
+            <div class="input-group">
+              <label>GitHub URL</label>
+              <input type="url" id="github" name="github">
+            </div>
+            <div class="input-group">
+              <label>Portfolio URL</label>
+              <input type="url" id="portfolio" name="portfolio">
+            </div>
+            <div class="input-group">
+              <label>Current Company</label>
+              <input type="text" id="company" name="company">
+            </div>
+            <div class="input-group">
+              <label>Current Title</label>
+              <input type="text" id="title" name="title">
+            </div>
+          </div>
+        </div>
+        
+        <div class="actions">
+          <button type="submit" class="btn primary">Save Profile</button>
+          <span id="saveStatus" class="status-msg"></span>
+        </div>
+      </form>
+    </div>
+
+    <div id="tracker-tab" class="tab-content">
+      <h1>Application Tracker</h1>
+      <p class="subtitle">History of applications you've filled using QuickApply.</p>
+      
+      <div class="tracker-container">
+        <table id="trackerTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Site</th>
+              <th>Fields Filled</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- rows will be injected here -->
+          </tbody>
+        </table>
+        <div id="emptyTracker" class="empty-state">No applications tracked yet.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
